@@ -20,17 +20,22 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Initially designed color palete:
 
-To learn more about Next.js, take a look at the following resources:
+Background Color: #020617 (dark navy blue)
+Text Color: #CBD5E1 (soft gray)
+Accent Color (Neon): #FF0040 (neon red)
+Accent Color (Cyan): #00CCFF (slightly darker cyan for better contrast)
+Selected Text Background (Code Blocks): #CCCCCC (light gray)
+Selected Text Color (Code Blocks): #333333 (dark gray)
+Code Block Background Color: #f7f7f7 (off-white)
+Code Text Color: #333333 (dark gray)
+Code Syntax Highlighting Colors:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Keywords & Neon Accent: #FF0040 (neon red)
+- Strings: #008000 (dark green)
+- Functions: #FFA500 (orange)
+- Numbers: #800080 (purple)
+- Comments & Text: #CBD5E1 (soft gray)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+NOTE: think about the selected text i am not 100 happy with it
