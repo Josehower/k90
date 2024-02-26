@@ -9,7 +9,8 @@ const config: Config = {
     },
     extend: {
       colors: {
-        "bright-cyan": "#00FFFF",
+        "bright-cyan": "#00CCFF",
+        "neon-red": "#FF0040",
       },
     },
   },

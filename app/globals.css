@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 ::selection {
-  background: #8b0000;
-  color: #f0f0f0;
+  background: #cccccc;
+  color: #333333;
 }
 
 /* Regular */

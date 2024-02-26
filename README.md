@@ -22,9 +22,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Initially designed color palete:
 
-Background Color: #020617 (dark navy blue)
-Text Color: #CBD5E1 (soft gray)
-Accent Color (Neon): #FF0040 (neon red)
+Background Color: #020617 (dark navy blue) slate-950
+Text Color: #CBD5E1 (soft gray) slate-300
+Accent Color (Neon): #FF0040 (neon-red)
 Accent Color (Cyan): #00CCFF (slightly darker cyan for better contrast)
 Selected Text Background (Code Blocks): #CCCCCC (light gray)
 Selected Text Color (Code Blocks): #333333 (dark gray)
@@ -39,3 +39,7 @@ Code Syntax Highlighting Colors:
 - Comments & Text: #CBD5E1 (soft gray)
 
 NOTE: think about the selected text i am not 100 happy with it
+
+# Adding next mdx following this post (is a bit outdated but it seems to work):
+
+https://colinhemphill.com/blog/markdown-syntax-highlighting-with-the-nextjs-app-router
