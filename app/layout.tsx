@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="sans-serif bg-slate-950 text-slate-200">{children}</body>
+      <body className="sans-serif min-h-screen max-w-screen-lg bg-slate-950 p-1.5 text-slate-200 lg:mx-auto  lg:p-0">
+        {children}
+      </body>
     </html>
   )
 }

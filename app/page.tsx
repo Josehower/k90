@@ -22,7 +22,7 @@ export default function Home() {
         google.com
       </Link>
       <br />
-      <button className="bg-neon-red rounded-sm p-1.5 transition-transform hover:scale-105">
+      <button className="rounded-sm bg-neon-red p-1.5 transition-transform hover:scale-105">
         Click
       </button>
     </main>
