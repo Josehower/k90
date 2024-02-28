@@ -2,7 +2,6 @@ import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./mdx-components.tsx"],
-  exclude: ["./app/_components/CodeBlock.tsx"],
   safelist: [
     {
       pattern: /hljs+/,
