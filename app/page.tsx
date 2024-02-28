@@ -1,4 +1,5 @@
 import Link from "next/link"
+import CodeBlock from "./_components/CodeBlock"
 
 export default function Home() {
   return (
@@ -25,6 +26,15 @@ export default function Home() {
       <button className="rounded-sm bg-neon-red p-1.5 transition-transform hover:scale-105">
         Click
       </button>
+      <br />
+      <CodeBlock
+        code={`const test = "test"
+interface Test {
+  myProp: string
+}
+
+for (let i = 100; i++){}`}
+      />
     </main>
   )
 }
