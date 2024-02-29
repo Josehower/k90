@@ -1,9 +1,11 @@
+import { BeakerIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
 
 export default function Home() {
   return (
     <main>
       <h1 className="text-2xl font-bold">I am Jose</h1>
+
       <p>
         Hey there! I&apos;m Jose Fernando Hower, a passionate full-stack
         developer based in Vienna. With a knack for turning ideas into reality
@@ -19,8 +21,9 @@ export default function Home() {
         Example.com
       </Link>
       <br />
+
       <button className="rounded-sm bg-neon-red p-1.5 transition-transform hover:scale-105">
-        Subscribe
+        <BeakerIcon className="inline h-6 w-6" /> Subscribe
       </button>
       <br />
     </main>

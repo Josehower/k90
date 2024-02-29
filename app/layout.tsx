@@ -1,6 +1,8 @@
 import "./globals.css"
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
+import github from "../public/gh.svg"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,32 +17,45 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="sans-serif min-h-screen max-w-screen-lg bg-slate-950 p-1.5 text-slate-200 lg:mx-auto  lg:p-0">
-        <nav>
-          <span>Jose Hower</span>
-          <Link href="/blog" className="underline">
-            Blog
-          </Link>
-          <Link
-            href="https://github.com/Josehower"
-            target="_blank"
-            className="underline"
-          >
-            GitHub
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/josehower"
-            target="_blank"
-            className="underline"
-          >
-            Linkedin
-          </Link>
-          <Link
-            href="https://twitter.com/HowerBarbosa"
-            target="_blank"
-            className="underline"
-          >
-            X
-          </Link>
+        <nav className="mt-5 flex items-center">
+          <span className="underline-red grow text-xl font-bold">
+            JoseHöwer
+          </span>
+          <div className="flex items-center">
+            <Link
+              href="/blog"
+              className="mr-3 rounded-sm border-2 border-neon-red px-4 py-2 hover:bg-neon-red"
+            >
+              Blog
+            </Link>
+            <Link
+              href="https://github.com/Josehower"
+              target="_blank"
+              className="mr-3 "
+            >
+              <Image
+                className="inline"
+                src={github}
+                width={24}
+                height={24}
+                alt=""
+              />{" "}
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/josehower"
+              target="_blank"
+              className="mr-3 "
+            >
+              Linkedin
+            </Link>
+            <Link
+              href="https://twitter.com/HowerBarbosa"
+              target="_blank"
+              className=""
+            >
+              X
+            </Link>
+          </div>
         </nav>
         {children}
       </body>

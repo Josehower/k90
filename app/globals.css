@@ -7,6 +7,13 @@
   color: #333333;
 }
 
+@layer utilities {
+  .underline-red {
+    text-decoration: underline;
+    text-decoration-color: #ff0040;
+  }
+}
+
 /* Regular */
 @font-face {
   font-family: "Roboto";
