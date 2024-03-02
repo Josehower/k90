@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import github from "../public/gh.svg"
+import BrandIcons from "./_components/BrandIcons"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="sans-serif min-h-screen max-w-screen-lg bg-slate-950 p-1.5 text-slate-200 lg:mx-auto  lg:p-0">
-        <nav className="mt-5 flex items-center">
+        <nav className="mt-5 flex items-center border-b pb-4">
           <span className="underline-red grow text-xl font-bold">
             JoseHöwer
           </span>
@@ -33,27 +34,21 @@ export default function RootLayout({
               target="_blank"
               className="mr-3 "
             >
-              <Image
-                className="inline"
-                src={github}
-                width={24}
-                height={24}
-                alt=""
-              />{" "}
+              <BrandIcons brand="GitHub" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/josehower"
               target="_blank"
               className="mr-3 "
             >
-              Linkedin
+              <BrandIcons brand="Linkedin" />
             </Link>
             <Link
               href="https://twitter.com/HowerBarbosa"
               target="_blank"
               className=""
             >
-              X
+              <BrandIcons brand="X" />
             </Link>
           </div>
         </nav>
