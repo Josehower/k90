@@ -1,8 +1,6 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
-import github from "../public/gh.svg"
 import BrandIcons from "./_components/BrandIcons"
 
 export const metadata: Metadata = {
@@ -17,8 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="sans-serif min-h-screen max-w-screen-lg bg-slate-950 p-1.5 text-slate-200 lg:mx-auto  lg:p-0">
-        <nav className="mt-5 flex items-center border-b pb-4">
+      <body className="sans-serif min-h-fit max-w-screen-lg bg-slate-950 p-1.5 text-slate-200 lg:mx-auto  lg:p-0">
+        <nav className="mb-10 mt-5 flex items-center border-b pb-4 ">
           <Link
             href="/"
             className="underline-red grow text-4xl font-bold hover:border-neon-red"
@@ -65,6 +63,8 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
+        <br />
+        <br />
       </body>
     </html>
   )
