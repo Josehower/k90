@@ -19,13 +19,16 @@ export default function RootLayout({
     <html lang="en">
       <body className="sans-serif min-h-screen max-w-screen-lg bg-slate-950 p-1.5 text-slate-200 lg:mx-auto  lg:p-0">
         <nav className="mt-5 flex items-center border-b pb-4">
-          <span className="underline-red grow text-xl font-bold">
+          <Link
+            href="/"
+            className="underline-red grow text-4xl font-bold hover:border-neon-red"
+          >
             JoseHöwer
-          </span>
+          </Link>
           <div className="flex items-center">
             <Link
               href="/blog"
-              className="mr-3 rounded-sm border-2 border-neon-red px-4 py-2 hover:bg-neon-red"
+              className="mr-3 rounded-sm border-2 border-slate-200 px-4 py-2 transition-all hover:border-2 hover:border-neon-red hover:bg-neon-red hover:bg-opacity-30"
             >
               Blog
             </Link>
@@ -34,21 +37,30 @@ export default function RootLayout({
               target="_blank"
               className="mr-3 "
             >
-              <BrandIcons brand="GitHub" />
+              <BrandIcons
+                brand="GitHub"
+                className="h-8 w-8 rounded-full p-1 hover:bg-neon-red"
+              />
             </Link>
             <Link
               href="https://www.linkedin.com/in/josehower"
               target="_blank"
               className="mr-3 "
             >
-              <BrandIcons brand="Linkedin" />
+              <BrandIcons
+                brand="Linkedin"
+                className="h-8 w-8 rounded-full p-1 hover:bg-neon-red"
+              />
             </Link>
             <Link
               href="https://twitter.com/HowerBarbosa"
               target="_blank"
               className=""
             >
-              <BrandIcons brand="X" />
+              <BrandIcons
+                brand="X"
+                className="h-8 w-8 rounded-full p-1 hover:bg-neon-red"
+              />
             </Link>
           </div>
         </nav>

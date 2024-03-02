@@ -12,6 +12,11 @@
     text-decoration: underline;
     text-decoration-color: #ff0040;
   }
+
+  .underline-slate {
+    text-decoration: underline;
+    text-decoration-color: #e2e8f0;
+  }
 }
 
 /* Regular */

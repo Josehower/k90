@@ -4,26 +4,28 @@ import Link from "next/link"
 export default function Home() {
   return (
     <main>
-      <h1 className="text-2xl font-bold">I am Jose</h1>
-
-      <p>
-        Hey there! I&apos;m Jose Fernando Hower, a passionate full-stack
-        developer based in Vienna. With a knack for turning ideas into reality
-        through code, I thrive on creating innovative solutions that make a
-        difference.
+      <h1 className="mt-10 text-4xl font-bold">
+        Welcome to my corner of the web!
+      </h1>
+      <p className="mt-10">
+        Welcome! I&apos;m Jose Fernando Höwer Barbosa, a fullstack developer
+        passionate about clean code and impactful projects. Colombian-Austrian
+        based in Vienna, I embrace challenges and teamwork. Let&apos;s
+        collaborate for meaningful solutions.
       </p>
       <br />
       <Link
         passHref
         href="https://example.com"
-        className="text-bright-cyan underline visited:text-slate-200"
+        className="underline-red visited:underline-slate hover:underline-red transition-all hover:text-neon-red"
       >
         Example.com
       </Link>
       <br />
-
-      <button className="rounded-sm bg-neon-red p-1.5 transition-transform hover:scale-105">
-        <BeakerIcon className="inline h-6 w-6" /> Subscribe
+      <BeakerIcon className="inline h-6 w-6" />
+      <br /> <br /> <br /> <br />
+      <button className="mr-3 rounded-sm border-2 border-slate-200 px-4 py-2 transition-all hover:border-2 hover:border-neon-red hover:bg-neon-red hover:bg-opacity-30">
+        Subscribe
       </button>
       <br />
     </main>
