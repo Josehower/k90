@@ -1,5 +1,6 @@
 import { BeakerIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
+import PostList from "./_components/PostList"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <h2 className="mt-10 flex items-center text-3xl font-bold">
         Latests Posts
       </h2>
+      <PostList />
       <ul>
         <li>
           <Link href="/blog/introduction-to-javascript">
