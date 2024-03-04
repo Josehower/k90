@@ -12,6 +12,7 @@ export default async function Post(props: Props) {
   return (
     <div>
       Author: {data.author}
+      <h1 className="mb-4 text-4xl font-bold">{data.title}</h1>
       {content()}
     </div>
   )
