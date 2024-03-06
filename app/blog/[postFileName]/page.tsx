@@ -1,3 +1,5 @@
+import { Post } from "@/types/blog"
+
 interface Props {
   params: {
     postFileName: string
@@ -5,15 +7,14 @@ interface Props {
 }
 
 export default async function Post(props: Props) {
-  const { default: content, frontmatter: data } = await import(
+  const { default: getPostContent, frontmatter: data }: Post = await import(
     `../(posts)/${props.params.postFileName}.mdx`
   )
-  console.log(content())
+
   return (
     <div>
       Author: {data.author}
-      <h1 className="mb-4 text-4xl font-bold">{data.title}</h1>
-      {content()}
+      <div className="mt-5">{getPostContent()}</div>
     </div>
   )
 }

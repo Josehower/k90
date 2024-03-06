@@ -26,7 +26,7 @@ export default function RootLayout({
           <div className="flex items-center">
             <Link
               href="/blog"
-              className="mr-3 rounded-sm border-2 border-slate-200 px-4 py-2 transition-all hover:border-2 hover:border-neon-red hover:bg-neon-red hover:bg-opacity-30"
+              className="mr-3 rounded-xl border-2 border-slate-200 px-4 py-2 transition-all hover:border-2 hover:border-neon-red hover:bg-neon-red hover:bg-opacity-30"
             >
               Blog
             </Link>
