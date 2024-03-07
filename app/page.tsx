@@ -1,5 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
 import PostsExerpt from "./_components/PostsExerpt"
+import ProjectBox from "./_components/ProjectBox"
 
 export default function Home() {
   return (
@@ -24,50 +26,29 @@ export default function Home() {
       </h2>
 
       <div className="mt-10 grid items-center justify-items-center gap-2 gap-y-8 md:grid-cols-2  md:gap-x-48">
-        <div>
-          Pokemon Landscape
-          <Image
-            className="cursor-pointer rounded-xl border-4 border-transparent transition-all hover:border-neon-red"
-            src="/images/pokemon-landscape.png"
-            alt="pokemon landscape"
-            width={400}
-            height={400}
-          />
-          <div>GitHub - Live</div>
-        </div>
-        <div>
-          Barcode Tacker
-          <Image
-            className="cursor-pointer rounded-xl border-4 border-transparent transition-all hover:border-neon-red"
-            src="/images/barcode-tracker.png"
-            alt="pokemon landscape"
-            width={400}
-            height={400}
-          />
-          <div>GitHub - Live</div>
-        </div>
-        <div>
-          Kill The Dragon
-          <Image
-            className="cursor-pointer rounded-xl border-4 border-transparent transition-all hover:border-neon-red"
-            src="/images/kill-the-dragon.png"
-            alt="pokemon landscape"
-            width={400}
-            height={400}
-          />
-          <div>GitHub - Live</div>
-        </div>
-        <div>
-          Landing Page Example
-          <Image
-            className="cursor-pointer rounded-xl border-4 border-transparent transition-all hover:border-neon-red"
-            src="/images/landing-page.png"
-            alt="pokemon landscape"
-            width={400}
-            height={400}
-          />
-          <div>GitHub - Live</div>
-        </div>
+        <ProjectBox
+          title="Pokemon Landscape"
+          image="/images/pokemon-landscape.png"
+          github="https://github.com/Josehower/poke-landscape"
+          live="https://pokemon-landscape.netlify.app/"
+        />
+        <ProjectBox
+          title="Landing Page"
+          image="/images/landing-page.png"
+          github="https://github.com/Josehower/Landing-page-exercise"
+          live="https://jh-landing-page.netlify.app/"
+        />
+        <ProjectBox
+          title="Kill The Dragon"
+          image="/images/kill-the-dragon.png"
+          github="https://github.com/Josehower/kill-the-dragon"
+          live="https://kill-the-dragon.fly.dev/game"
+        />
+        <ProjectBox
+          title="Barcode Tracker"
+          image="/images/barcode-tracker.png"
+          github="https://github.com/Josehower/barcode-tracking-exercise"
+        />
       </div>
     </main>
   )
