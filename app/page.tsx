@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import PostsExerpt from "./_components/PostsExerpt"
 import ProjectBox from "./_components/ProjectBox"
+import YoutubeEmbeed from "./_components/YoutubeEmbeed"
 
 export default function Home() {
   return (
@@ -48,6 +49,21 @@ export default function Home() {
           title="Barcode Tracker"
           image="/images/barcode-tracker.png"
           github="https://github.com/Josehower/barcode-tracking-exercise"
+        />
+      </div>
+
+      <h2 className="mt-10 flex items-center text-3xl font-bold">
+        Public Speaking
+      </h2>
+
+      <div className="mt-10 grid items-center justify-items-center gap-2 gap-y-8 md:grid-cols-2  md:gap-x-48">
+        <YoutubeEmbeed
+          url="https://www.youtube.com/embed/Xt8WdZ8cokI?si=e6ZIIkCAunG-BpDN"
+          title="My Learnings Creating a 2d Game: Introduction to react-three-fiber"
+        />
+        <YoutubeEmbeed
+          url="https://www.youtube.com/embed/xWuiI5d84GY?si=6pSwbrToZTPwxgr0"
+          title="From Working on a Production Line to Web Development"
         />
       </div>
     </main>
