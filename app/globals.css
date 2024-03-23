@@ -2,21 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-  background: #cccccc;
-  color: #333333;
-}
-
-@layer utilities {
-  .underline-red {
-    text-decoration: underline;
-    text-decoration-color: #ff0040;
-  }
-
-  .underline-slate {
-    text-decoration: underline;
-    text-decoration-color: #e2e8f0;
-  }
+* {
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 /* Regular */
@@ -45,9 +33,4 @@
   src: url("/fonts/roboto/Roboto-BlackItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
-}
-
-@font-face {
-  font-family: "Roboto Mono";
-  src: url("/fonts/roboto-mono/RobotoMono-Regular.ttf") format("truetype");
 }

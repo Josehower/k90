@@ -1,71 +1,144 @@
-import Image from "next/image"
+"use client"
 import Link from "next/link"
-import PostsExerpt from "./_components/PostsExerpt"
-import ProjectBox from "./_components/ProjectBox"
-import YoutubeEmbeed from "./_components/YoutubeEmbeed"
+import { useEffect, useRef, useState } from "react"
 
+interface Song {
+  id: number
+  name: string
+  lyric?: string
+}
+
+const songs: Song[] = [
+  { id: 1, name: "Horas y segundos" },
+  { id: 2, name: "Tantas cosas" },
+  { id: 3, name: "Sucias Palabras" },
+  { id: 4, name: "Santamaria" },
+  { id: 5, name: "Mientes" },
+  {
+    id: 6,
+    name: "Y Si",
+    lyric: `
+  Anoche tuve una extraña conversación con la almohada...
+  y le pregunte si ha sido suficiente las cosas que me haz dado hasta hoy...
+
+  y me contesto que no hay cosa mas bella que tu risa,
+  que si nuestros ojos se encuentran hasta la piel se me eriza,
+  que eres lo mas hermoso que en la vida yo soñe,
+  que me inspiras con tus labios con tu forma de querer...
+
+  (precoro)
+  pues ya todo parece ser mas que un sublime sueño,
+  pues hoy todo parece un poco mas real ...
+
+  (Coro)
+  y si!!! ya lo puedo decir, que te AMO y que te SIENTO eres tu mi SENTIMIENTO
+  y si!!! ya lo puedo gritar, ya no temo a la tristeza ya murió mi soledad
+
+  Así que esta mañana desperté con muchas ansias locas,
+  de contemplarte y de rozar con mis mejillas tu boca,
+  de ser tu compañero de vivir de realizar,
+  de aprender con tu presencia lo que significa amar.
+
+  (precoro)
+  pues ya todo parece ser mas que un sublime sueño,
+  pues hoy todo parece un poco mas real ...
+
+  (Coro)
+  y si!!! ya lo puedo decir, que te AMO y que te SIENTO eres tu mi SENTIMIENTO
+  y si!!! ya lo puedo gritar, ya no temo a la tristeza ya murió mi soledad
+
+  (ultimo coro)
+
+  ... ya no temo a la tristeza eres tu... mi realidad
+  `,
+  },
+  { id: 7, name: "Los Chiquillos" },
+  { id: 8, name: "Esta vez es verdad" },
+  { id: 9, name: "No Acabemos" },
+  { id: 10, name: "Pecado" },
+  { id: 11, name: "Solo fui un juguete" },
+]
 export default function Home() {
+  const audioRef = useRef<HTMLAudioElement>(null)
+  const [currentSong, setCurrentSong] = useState<Song>(songs[3])
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.5
+    }
+  }, [])
+
+  const pauseAudio = () => {
+    if (!audioRef.current) return
+    setIsPlaying(false)
+    audioRef.current.pause()
+  }
+
+  const playAudio = (song: Song) => {
+    if (!audioRef.current) return
+
+    setCurrentSong(song)
+    setIsPlaying(true)
+    audioRef.current.play()
+  }
+
   return (
-    <main>
-      <h1 className="flex items-center text-4xl font-bold">
-        Welcome to my corner of the web!
-      </h1>
-      <p className="mt-10">
-        Welcome! I&apos;m Jose Fernando Höwer Barbosa, a fullstack developer
-        passionate about clean code and impactful projects. Colombian-Austrian
-        based in Vienna, I embrace challenges and teamwork. Let&apos;s
-        collaborate for meaningful solutions.
-      </p>
+    <main className="mx-auto my-10 w-11/12 bg-black bg-opacity-80 p-6 md:w-8/12">
+      <h1 className="text-center text-4xl font-bold text-band-green">K90</h1>
 
-      <h2 className="mt-10 flex items-center text-3xl font-bold">
-        Latest Post
-      </h2>
-      <PostsExerpt limit={1} />
+      <h2 className="text-center text-2xl font-bold">reenKu9ntr0</h2>
+      <p>agosto 2024</p>
 
-      <h2 className="mt-10 flex items-center text-3xl font-bold">
-        Some of my projects
-      </h2>
-
-      <div className="mt-10 grid items-center justify-items-center gap-2 gap-y-8 md:grid-cols-2  md:gap-x-48">
-        <ProjectBox
-          title="Pokemon Landscape"
-          image="/images/pokemon-landscape.png"
-          github="https://github.com/Josehower/poke-landscape"
-          live="https://pokemon-landscape.netlify.app/"
-        />
-        <ProjectBox
-          title="Landing Page"
-          image="/images/landing-page.png"
-          github="https://github.com/Josehower/Landing-page-exercise"
-          live="https://jh-landing-page.netlify.app/"
-        />
-        <ProjectBox
-          title="Kill The Dragon"
-          image="/images/kill-the-dragon.png"
-          github="https://github.com/Josehower/kill-the-dragon"
-          live="https://kill-the-dragon.fly.dev/game"
-        />
-        <ProjectBox
-          title="Barcode Tracker"
-          image="/images/barcode-tracker.png"
-          github="https://github.com/Josehower/barcode-tracking-exercise"
-        />
+      <div>
+        {currentSong.name}
+        <audio ref={audioRef} controls>
+          <source src="/songs/santamaria.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
       </div>
 
-      <h2 className="mt-10 flex items-center text-3xl font-bold">
-        Public Speaking
-      </h2>
+      <h2>Repertorio</h2>
+      <ul>
+        {songs.map((song) => (
+          <li
+            key={`list-item-song-${song.id}`}
+            className="mb-1 flex flex-wrap justify-around p-4"
+          >
+            <div className="min-w-60 text-center ">{song.name}</div>
+            <div className="mt-3 flex flex-grow justify-around md:mt-0">
+              <Link
+                href={`/#lyric-${song.id}`}
+                className="inline-block bg-band-green p-1"
+              >
+                Letra
+              </Link>
+              <button
+                className="inline-block bg-band-green p-1"
+                onClick={() => (isPlaying ? pauseAudio() : playAudio(song))}
+              >
+                {isPlaying ? "Pause" : "Play"}
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
 
-      <div className="mt-10 grid items-center justify-items-center gap-2 gap-y-8 md:grid-cols-2  md:gap-x-48">
-        <YoutubeEmbeed
-          url="https://www.youtube.com/embed/Xt8WdZ8cokI?si=e6ZIIkCAunG-BpDN"
-          title="My Learnings Creating a 2d Game: Introduction to react-three-fiber"
-        />
-        <YoutubeEmbeed
-          url="https://www.youtube.com/embed/xWuiI5d84GY?si=6pSwbrToZTPwxgr0"
-          title="From Working on a Production Line to Web Development"
-        />
-      </div>
+      {songs.map((song) => (
+        <div key={`lyric-div-${song.id}`} className="mt-4">
+          <h3
+            id={`lyric-${song.id}`}
+            className="text-1xl text-center font-bold"
+          >
+            {song.name}
+          </h3>
+          {song.lyric && (
+            <div>
+              <pre className="whitespace-pre-wrap">{song.lyric}</pre>
+            </div>
+          )}
+        </div>
+      ))}
     </main>
   )
 }

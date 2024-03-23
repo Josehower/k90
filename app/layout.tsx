@@ -1,7 +1,5 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import Link from "next/link"
-import BrandIcons from "./_components/BrandIcons"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,56 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="sans-serif min-h-fit max-w-screen-lg bg-slate-950 p-1.5 text-slate-200 lg:mx-auto  lg:p-0">
-        <nav className="mb-10 mt-5 flex items-center border-b pb-4 ">
-          <Link
-            href="/"
-            className="underline-red grow text-4xl font-bold hover:border-neon-red"
-          >
-            JoseHöwer
-          </Link>
-          <div className="flex items-center">
-            <Link
-              href="/blog"
-              className="mr-3 rounded-xl border-2 border-slate-200 px-4 py-2 transition-all hover:border-2 hover:border-neon-red hover:bg-neon-red hover:bg-opacity-30"
-            >
-              Blog
-            </Link>
-            <Link
-              href="https://github.com/Josehower"
-              target="_blank"
-              className="mr-3 "
-            >
-              <BrandIcons
-                brand="GitHub"
-                className="h-8 w-8 rounded-full p-1 hover:bg-neon-red"
-              />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/josehower"
-              target="_blank"
-              className="mr-3 "
-            >
-              <BrandIcons
-                brand="Linkedin"
-                className="h-8 w-8 rounded-full p-1 hover:bg-neon-red"
-              />
-            </Link>
-            <Link
-              href="https://twitter.com/HowerBarbosa"
-              target="_blank"
-              className=""
-            >
-              <BrandIcons
-                brand="X"
-                className="h-8 w-8 rounded-full p-1 hover:bg-neon-red"
-              />
-            </Link>
-          </div>
-        </nav>
+      <body className=" bg-black bg-[url('/images/k90-pic.png')] bg-fixed bg-top bg-no-repeat md:bg-cover">
         {children}
-        <br />
-        <br />
       </body>
     </html>
   )
