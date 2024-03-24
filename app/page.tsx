@@ -83,7 +83,6 @@ const songs: Song[] = [
 export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [currentSong, setCurrentSong] = useState<Song>(songs[3])
-  const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     if (audioRef.current) {
@@ -91,17 +90,10 @@ export default function Home() {
     }
   }, [])
 
-  const pauseAudio = () => {
-    if (!audioRef.current) return
-    setIsPlaying(false)
-    audioRef.current.pause()
-  }
-
   const playAudio = (song: Song) => {
     if (!audioRef.current) return
 
     setCurrentSong(song)
-    setIsPlaying(true)
     audioRef.current.src = song.audioFile || "/songs/santamaria.mp3"
     audioRef.current.play()
   }
@@ -125,14 +117,14 @@ export default function Home() {
 
       <h2 className="mt-4 text-3xl font-bold ">Repertorio:</h2>
       <ul className="mt-4">
-        {songs.map((song, index) => (
+        {songs.map((song) => (
           <li
             key={`list-item-song-${song.id}`}
             className={`flex flex-wrap items-center justify-around gap-1 rounded-lg px-2 py-4
               ${currentSong.id === song.id ? "bg-band-green-dark" : ""}
             `}
           >
-            <div className="flex min-w-60" onClick={() => playAudio(song)}>
+            <div className="flex w-40" onClick={() => playAudio(song)}>
               {currentSong.id === song.id && (
                 <div className="mr-1">&#9889; </div>
               )}
