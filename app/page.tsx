@@ -16,8 +16,9 @@ const songs: Song[] = [
   { id: 3, name: "Sucias Palabras" },
   { id: 4, name: "Santamaria", audioFile: "/songs/santamaria.mp3" },
   { id: 5, name: "Mientes" },
+  { id: 6, name: "March" },
   {
-    id: 6,
+    id: 7,
     name: "Y Si",
     lyric: `
   Anoche tuve una extraña conversación
@@ -74,11 +75,11 @@ const songs: Song[] = [
   eres tu mi realidad
   `,
   },
-  { id: 7, name: "Los Chiquillos" },
-  { id: 8, name: "Esta vez es verdad" },
-  { id: 9, name: "No Acabemos" },
-  { id: 10, name: "Pecado" },
-  { id: 11, name: "Solo fui un juguete" },
+  { id: 6, name: "Los Chiquillos" },
+  { id: 9, name: "Esta vez es verdad" },
+  { id: 10, name: "No Acabemos" },
+  { id: 11, name: "Pecado" },
+  { id: 12, name: "Solo fui un juguete" },
 ]
 export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null)
