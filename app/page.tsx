@@ -5,20 +5,32 @@ import { useEffect, useRef, useState } from "react"
 
 interface Song {
   id: number
+  slug: string
   name: string
   lyric?: string
   audioFile?: string
 }
 
 const songs: Song[] = [
-  { id: 1, name: "Horas y segundos", audioFile: "/songs/horas-y-segundos.mp3" },
-  { id: 2, name: "Tantas cosas" },
-  { id: 3, name: "Sucias Palabras" },
-  { id: 4, name: "Santamaria", audioFile: "/songs/santamaria.mp3" },
-  { id: 5, name: "Mientes" },
-  { id: 6, name: "March" },
+  {
+    id: 1,
+    slug: "horas-y-segundos",
+    name: "Horas y segundos",
+    audioFile: "/songs/horas-y-segundos.mp3",
+  },
+  { id: 2, slug: "tantas-cosas", name: "Tantas cosas" },
+  { id: 3, slug: "sucias-palabras", name: "Sucias Palabras" },
+  {
+    id: 4,
+    slug: "santamaria",
+    name: "Santamaria",
+    audioFile: "/songs/santamaria.mp3",
+  },
+  { id: 5, slug: "mientes", name: "Mientes" },
+  { id: 6, slug: "march", name: "March" },
   {
     id: 7,
+    slug: "y-si",
     name: "Y Si",
     lyric: `
   Anoche tuve una extraña conversación
@@ -75,11 +87,11 @@ const songs: Song[] = [
   eres tu mi realidad
   `,
   },
-  { id: 6, name: "Los Chiquillos" },
-  { id: 9, name: "Esta vez es verdad" },
-  { id: 10, name: "No Acabemos" },
-  { id: 11, name: "Pecado" },
-  { id: 12, name: "Solo fui un juguete" },
+  { id: 6, slug: "los-chiquillos", name: "Los Chiquillos" },
+  { id: 9, slug: "esta-vez-es-verdad", name: "Esta vez es verdad" },
+  { id: 10, slug: "no-acabemos", name: "No Acabemos" },
+  { id: 11, slug: "pecado", name: "Pecado" },
+  { id: 12, slug: "solo-fui-un-juguete", name: "Solo fui un juguete" },
 ]
 export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null)
@@ -134,7 +146,7 @@ export default function Home() {
             <div className="flex flex-grow justify-around">
               <Link
                 className="rounded-lg border border-solid bg-black p-2"
-                href={`/#lyric-${song.id}`}
+                href={`/#lyric-${song.slug}`}
               >
                 Letra
               </Link>
@@ -146,7 +158,7 @@ export default function Home() {
       {songs.map((song) => (
         <div key={`lyric-div-${song.id}`} className="mt-4">
           <h3
-            id={`lyric-${song.id}`}
+            id={`lyric-${song.slug}`}
             className="text-1xl text-center font-bold"
           >
             {song.name}
