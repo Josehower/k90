@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         "band-green": "#166C21",
+        "band-green-dark": "#09260d",
       },
     },
   },
