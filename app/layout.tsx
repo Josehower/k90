@@ -7,7 +7,7 @@ export const metadata: Metadata = {
       ? new URL("https://k90rock.com")
       : new URL("http://localhost:3000"),
   title: "K90",
-  description: "Sitio official de la banda Colombiana K90",
+  description: "Sitio oficial de la banda colombiana K90",
 }
 
 export default function RootLayout({
