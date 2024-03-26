@@ -2,8 +2,12 @@ import "./globals.css"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
+  metadataBase:
+    process.env.NODE_ENV === "production"
+      ? new URL("https://k90rock.com")
+      : new URL("http://localhost:3000"),
   title: "K90",
-  description: "Colombian Rock Band K90",
+  description: "Sitio official de la banda Colombiana K90",
 }
 
 export default function RootLayout({
