@@ -87,15 +87,23 @@ const songs: Song[] = [
   eres tu mi realidad
   `,
   },
-  { id: 6, slug: "los-chiquillos", name: "Los Chiquillos" },
+  { id: 8, slug: "los-chiquillos", name: "Los Chiquillos" },
   { id: 9, slug: "esta-vez-es-verdad", name: "Esta vez es verdad" },
   { id: 10, slug: "no-acabemos", name: "No Acabemos" },
   { id: 11, slug: "pecado", name: "Pecado" },
   { id: 12, slug: "solo-fui-un-juguete", name: "Solo fui un juguete" },
 ]
+
+function isTouchDevice() {
+  return "ontouchstart" in window || navigator.maxTouchPoints
+}
+
 export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [currentSong, setCurrentSong] = useState<Song>(songs[3])
+  const [preSelectedSong, setPreSelectedSong] = useState<Song>()
+
+  const SelectedSong = preSelectedSong || currentSong
 
   useEffect(() => {
     if (audioRef.current) {
@@ -107,12 +115,23 @@ export default function Home() {
     if (!audioRef.current) return
 
     setCurrentSong(song)
+    setPreSelectedSong(undefined)
     audioRef.current.src = song.audioFile || "/songs/santamaria.mp3"
     audioRef.current.play()
   }
 
+  const audioEnded = (endingSong: Song) => {
+    if (!audioRef.current) return
+
+    const nextSong = songs[endingSong.id] || songs[0]
+    setCurrentSong(nextSong)
+    setPreSelectedSong(undefined)
+    audioRef.current.src = nextSong.audioFile || "/songs/santamaria.mp3"
+    audioRef.current.play()
+  }
+
   return (
-    <main className="mx-auto my-10 w-11/12 rounded-lg bg-black bg-opacity-90 p-2 md:w-8/12">
+    <main className="mx-auto my-10 w-11/12 rounded-lg bg-black bg-opacity-90 p-2 md:w-8/12 md:p-5">
       <h1 className="text-4xl font-bold">
         <img
           src="/images/k90icon.png"
@@ -133,20 +152,38 @@ export default function Home() {
         {songs.map((song) => (
           <li
             key={`list-item-song-${song.id}`}
-            className={`flex flex-wrap items-center justify-around gap-1 rounded-lg px-2 py-4
-              ${currentSong.id === song.id ? "bg-band-green-dark" : ""}
+            className={`flex flex-wrap items-center justify-between gap-1 rounded-lg px-2
+              ${SelectedSong.id === song.id ? "bg-band-green-dark" : "hover:bg-band-green-dark hover:bg-opacity-60"}
             `}
+            onDoubleClick={() => playAudio(song)}
+            onClick={() => {
+              isTouchDevice() ? playAudio(song) : setPreSelectedSong(song)
+            }}
           >
-            <div className="flex w-40" onClick={() => playAudio(song)}>
-              {currentSong.id === song.id && (
-                <div className="mr-1">&#9889; </div>
+            <div className="flex  py-4">
+              {currentSong.id === song.id ? (
+                <div className="mr-1">&#9889;</div>
+              ) : (
+                preSelectedSong?.id === song.id && (
+                  <div
+                    className="mr-2 cursor-pointer"
+                    onClick={() => {
+                      playAudio(song)
+                    }}
+                  >
+                    &#9658;{" "}
+                  </div>
+                )
               )}
               <div>{song.name}</div>
             </div>
-            <div className="flex flex-grow justify-around">
+            <div>
               <Link
-                className="rounded-lg border border-solid bg-black p-2"
+                className="mr-20 rounded-lg border border-solid bg-black p-2"
                 href={`/#lyric-${song.slug}`}
+                onClick={(e) => {
+                  e.stopPropagation()
+                }}
               >
                 Letra
               </Link>
@@ -171,10 +208,15 @@ export default function Home() {
         </div>
       ))}
 
-      <div className="bg-band-green-dark fixed bottom-0 left-0 flex w-full justify-center px-6 py-4">
+      <div className="fixed bottom-0 left-0 flex w-full justify-center bg-band-green-dark px-6 py-4">
         <div className="font-semi-bold text-center">
           {currentSong.name} - K90
-          <audio ref={audioRef} controls className="mt-4">
+          <audio
+            ref={audioRef}
+            controls
+            className="mt-4"
+            onEnded={() => audioEnded(currentSong)}
+          >
             <source
               src={currentSong.audioFile || "/songs/santamaria.mp3"}
               type="audio/mpeg"
