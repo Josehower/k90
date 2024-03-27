@@ -6,14 +6,13 @@ export const metadata: Metadata = {
   title: "K90",
   description: "Sitio oficial de la banda colombiana K90",
   openGraph: {
-    title: "K90 Rock",
-    description:
-      "Sitio oficial de la banda colombiana K90 - Proximo Evento de Reencuentro: Agosto 2024",
+    title: "Sitio oficial de la banda colombiana K90",
+    description: "Proximo Evento de Reencuentro: Agosto 2024",
   },
   twitter: {
-    title: "K90 Rock",
-    description:
-      "Sitio oficial de la banda colombiana K90 - Proximo Evento de Reencuentro: Agosto 2024",
+    title: "Sitio oficial de la banda colombiana K90",
+    card: "summary_large_image",
+    description: "Proximo Evento de Reencuentro: Agosto 2024",
   },
 }
 
