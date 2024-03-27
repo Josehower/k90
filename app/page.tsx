@@ -179,7 +179,7 @@ export default function Home() {
             </div>
             <div>
               <Link
-                className="mr-20 rounded-lg border border-solid bg-black p-2"
+                className="rounded-lg border border-solid bg-black p-2 md:mr-20"
                 href={`/#lyric-${song.slug}`}
                 onClick={(e) => {
                   e.stopPropagation()
