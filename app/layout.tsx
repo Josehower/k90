@@ -2,12 +2,19 @@ import "./globals.css"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  metadataBase:
-    process.env.NODE_ENV === "production"
-      ? new URL("https://k90rock.com")
-      : new URL("http://localhost:3000"),
+  metadataBase: new URL(process.env.BASE_URL || "http://localhost:3000"),
   title: "K90",
   description: "Sitio oficial de la banda colombiana K90",
+  openGraph: {
+    title: "K90 Rock",
+    description:
+      "Sitio oficial de la banda colombiana K90 - Proximo Evento de Reencuentro: Agosto 2024",
+  },
+  twitter: {
+    title: "K90 Rock",
+    description:
+      "Sitio oficial de la banda colombiana K90 - Proximo Evento de Reencuentro: Agosto 2024",
+  },
 }
 
 export default function RootLayout({
