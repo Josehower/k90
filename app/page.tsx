@@ -18,8 +18,18 @@ const songs: Song[] = [
     name: "Horas y segundos",
     audioFile: "/songs/horas-y-segundos.mp3",
   },
-  { id: 2, slug: "tantas-cosas", name: "Tantas cosas" },
-  { id: 3, slug: "sucias-palabras", name: "Sucias Palabras" },
+  {
+    id: 2,
+    slug: "tantas-cosas",
+    name: "Tantas cosas",
+    audioFile: "/songs/tantas-cosas.mp3",
+  },
+  {
+    id: 3,
+    slug: "sucias-palabras",
+    name: "Sucias Palabras",
+    audioFile: "/songs/sucias-palabras.mp3",
+  },
   {
     id: 4,
     slug: "santamaria",
