@@ -17,6 +17,34 @@ const songs: Song[] = [
     slug: "horas-y-segundos",
     name: "Horas y segundos",
     audioFile: "/songs/horas-y-segundos.mp3",
+    lyric: `
+  Bien sabes que te espero todo el día
+  Y solo yo me quedo en esta esquina
+  Cuento las horas y los segundos
+  Y el sentimiento es más profundo
+  Y si regresas solo espero poder decirte
+
+  Coro:
+
+  Que te amo con toda la fuerza del amor
+  Te amo con toda el alma y mi gran pasión
+  Cuando te hago el amor en la madrugada
+  O solo al verte dormir tranquila sobre mi almohada
+
+  Si sales te llevas toda mi vida
+  las ganas de sentir y respirar
+  Cuento las horas y los segundos
+  yo quiero verte eres mi mundo
+  y si regresas solo espero poder decirte
+
+  Coro:
+
+  Que te amo con toda la fuerza del amor
+  Te amo con toda el alma y mi gran pasión
+  Cuando te hago el amor en la madrugada
+  O solo al verte dormir tranquila sobre mi almohada
+
+`,
   },
   {
     id: 2,
@@ -45,30 +73,30 @@ const songs: Song[] = [
     lyric: `
   Anoche tuve una extraña conversación
   con la almohada
-  y le pregunte si ha sido suficiente
-  las cosas que me haz dado hasta hoy
+  y le pregunté si ha sido suficiente
+  las cosas que me has dado hasta hoy
 
-  y me contesto que no hay cosa
-  mas bella que tu risa,
+  y me contestó que no hay cosa
+  más bella que tu risa,
   que si nuestros ojos se encuentran
   hasta la piel se me eriza,
-  que eres lo mas hermoso que en
-  la vida yo soñe,
+  que eres lo más hermoso que en
+  la vida yo soñé,
   que me inspiras con tus labios con
   tu forma de querer
 
-  pues ya todo parece ser mas
+  pues ya todo parece ser más
   que un sublime sueño,
   pues hoy todo parece
-  un poco mas real
+  un poco más real
 
   Coro:
 
-  Y si! ya lo puedo decir,
+  Y sí, ya lo puedo decir,
   que te amo y que te siento
-  eres tu mi sentimiento
+  eres tú mi sentimiento
 
-  y si! ya lo puedo gritar,
+  Y sí, ya lo puedo gritar,
   ya no temo a la tristeza
   ya murió mi soledad
 
@@ -81,23 +109,77 @@ const songs: Song[] = [
   de aprender con tu presencia
   lo que significa amar.
 
-  pues ya todo parece ser mas
+  pues ya todo parece ser más
   que un sublime sueño,
   pues hoy todo parece
-  un poco mas real
+  un poco más real
 
   Coro:
 
-  Y si! ya lo puedo decir,
+  Y sí, ya lo puedo decir,
   que te amo y que te siento
-  eres tu mi sentimiento
+  eres tú mi sentimiento
 
-  y si! ya lo puedo gritar,
+  Y sí, ya lo puedo gritar,
   ya no temo a la tristeza
-  eres tu mi realidad
+  eres tú mi realidad
   `,
   },
-  { id: 8, slug: "los-chiquillos", name: "Los Chiquillos" },
+  {
+    id: 8,
+    slug: "los-chiquillos",
+    name: "Los Chiquillos",
+    lyric: `
+  Juanito tiene cuatro
+  Camila tiene un poco más de tres
+  Se conocieron en un parque
+  Y no importa ya por qué
+
+  El padre de Camila
+  Era el dueño del banco central
+  Era un gran hombre de alcurnia
+  De la alta sociedad
+
+  La madre de Juanito
+  Limpiaba pisos para poder calmar
+  El hambre que tenían
+  Hace tres días y algo más
+
+  Coro:
+
+  ¿Por qué Los niños pueden jugar
+  Sin importar su clase social
+  Ni el color de sus manos?
+  Pues son iguales, no importa más
+
+  ¿Por qué Los niños pueden jugar
+  Sin pensar en aparentar
+  Mientras los grandes nos matamos
+  En una guerra sin final?
+
+  Ella quisiera ser artista
+  Él quiere ser todo un doctor
+  O tal vez llegar a las estrellas
+  En su cohete sin motor
+
+  Jugaron juntos toda la tarde
+  Y cantaron hasta cansar
+  Entre risas inocentes
+  Que no saben en qué mundo están
+
+  Coro:
+
+  ¿Por qué? Los niños pueden jugar
+  Sin importar su clase social
+  Ni el color de sus manos
+  Son iguales, no importa más
+
+  ¿Por qué? Los niños pueden jugar
+  Sin pensar en aparentar
+  Mientras los grandes nos matamos
+  En una guerra sin final
+  `,
+  },
   { id: 9, slug: "esta-vez-es-verdad", name: "Esta vez es verdad" },
   { id: 10, slug: "no-acabemos", name: "No Acabemos" },
   { id: 11, slug: "pecado", name: "Pecado" },
