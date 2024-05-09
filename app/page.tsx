@@ -43,7 +43,6 @@ const songs: Song[] = [
   Te amo con toda el alma y mi gran pasión
   Cuando te hago el amor en la madrugada
   O solo al verte dormir tranquila sobre mi almohada
-
 `,
   },
   {
@@ -51,6 +50,63 @@ const songs: Song[] = [
     slug: "tantas-cosas",
     name: "Tantas cosas",
     audioFile: "/songs/tantas-cosas.mp3",
+    lyric: `
+  Y es que hay tantas cosas
+  Que me gustan de ti
+  Y es que hay tantas cosas
+  Que al verte me haces sentir
+
+  Es tu piel, tu mirar, tu manera de andar
+  Lo que me pone a pensar
+
+  Coro:
+
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+
+  Déjame vivir mil cosas más
+  Déjame acercarme a ti
+  y junto a ti volar
+
+  Coro:
+
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+
+  Hace ya unos meses
+  Que empezamos a andar
+  Y si me preguntas
+  Quisiera fueran cien más
+
+  Es que cuando no estás mi vida tiembla
+  Todo se hace imposible
+  Ya no hay cosas perfectas
+
+  Es que cuando te vas mi vida tiembla
+  y se va
+
+  Coro:
+
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+
+  Déjame vivir mil cosas más
+  Déjame acercarme a ti
+  y junto a ti volar
+
+  Coro:
+
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+  Es que es por ti, nena, que mi razón no encuentra
+  La manera de aterrizar
+    `,
   },
   {
     id: 3,
