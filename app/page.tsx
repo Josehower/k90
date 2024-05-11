@@ -136,7 +136,7 @@ const songs: Song[] = [
   más bella que tu risa,
   que si nuestros ojos se encuentran
   hasta la piel se me eriza,
-  que eres lo más hermoso que en
+  que eres lo más precioso que en
   la vida yo soñé,
   que me inspiras con tus labios con
   tu forma de querer
@@ -191,6 +191,11 @@ const songs: Song[] = [
   Se conocieron en un parque
   Y no importa ya por qué
 
+  Se sentaron en la arena
+  a cantar una linda canción
+  que enseñaron a la nena
+  pero que se sabían los dos
+
   El padre de Camila
   Era el dueño del banco central
   Era un gran hombre de alcurnia
@@ -203,19 +208,19 @@ const songs: Song[] = [
 
   Coro:
 
-  ¿Por qué Los niños pueden jugar
+  ¿Por qué los niños pueden jugar
   Sin importar su clase social
   Ni el color de sus manos?
-  Pues son iguales, no importa más
+  Son dos iguales, no importa más
 
-  ¿Por qué Los niños pueden jugar
+  ¿Por qué los niños pueden jugar
   Sin pensar en aparentar
   Mientras los grandes nos matamos
   En una guerra sin final?
 
   Ella quisiera ser artista
   Él quiere ser todo un doctor
-  O tal vez llegar a las estrellas
+  O tal vez tocar las estrellas
   En su cohete sin motor
 
   Jugaron juntos toda la tarde
@@ -225,21 +230,52 @@ const songs: Song[] = [
 
   Coro:
 
-  ¿Por qué? Los niños pueden jugar
+  ¿Por qué los niños pueden jugar
   Sin importar su clase social
-  Ni el color de sus manos
-  Son iguales, no importa más
+  Ni el color de sus manos?
+  Son dos iguales, no importa más
 
-  ¿Por qué? Los niños pueden jugar
+  ¿Por qué los niños pueden jugar
   Sin pensar en aparentar
   Mientras los grandes nos matamos
-  En una guerra sin final
+  En una guerra sin final?
   `,
   },
-  { id: 9, slug: "esta-vez-es-verdad", name: "Esta vez es verdad" },
+  {
+    id: 9,
+    slug: "esta-vez-es-verdad",
+    name: "Esta vez es verdad",
+    lyric: `
+  Maldita sea, dime por qué
+  me volviste a buscar si no me amas, bebé?
+  ¿Por qué justo hoy, cuando he cometido el error de llamarteotra vez,
+  me dices ok ok te llamo después?
+
+  coro:
+
+  ya son más de las diez, estoy aquí esperándote
+  encontrando recuerdos que creí mate
+  pero he decidido una vez más
+  que saldrás de mi vida pa' no regresar jamás
+  y esta vez es verdad
+
+  entonces adiós es mi última letra
+  tu nombre ya nunca volveré a nombrar
+  pues hoy esa rueda que gira en contra de mí y me quierematar
+  de una patada pondré en su lugar
+
+  coro:
+
+  ya son más de las diez, estoy aquí esperándote
+  encontrando recuerdos que creí mate
+  pero he decidido una vez más
+  que saldrás de mi vida pa' no regresar jamás
+  y esta vez es verdad
+  `,
+  },
   { id: 10, slug: "no-acabemos", name: "No Acabemos" },
-  { id: 11, slug: "pecado", name: "Pecado" },
-  { id: 12, slug: "solo-fui-un-juguete", name: "Solo fui un juguete" },
+  { id: 11, slug: "solo-fui-un-juguete", name: "Solo fui un juguete" },
+  // { id: 12, slug: "pecado", name: "Pecado" },
 ]
 
 function isTouchDevice() {
