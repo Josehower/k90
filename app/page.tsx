@@ -120,7 +120,41 @@ const songs: Song[] = [
     name: "Santamaria",
     audioFile: "/songs/santamaria.mp3",
   },
-  { id: 5, slug: "mientes", name: "Mientes" },
+  {
+    id: 5,
+    slug: "mientes",
+    name: "Mientes",
+    lyric: `
+  Hoy me pides que deje todo atrás
+  Que me arriesgue, enseguida me vas a amar
+  Que la luna brilla y el sol calienta
+  Te arrepientes y dices cambiaste ya
+  Que mi amor es algo que debes guardar
+  Y recuerdas lo bien que la pasamos juntos
+
+  Coro:
+
+  Mientes, lo sé muy bien
+  Me tomas, miras y dejas, soy el que paga después
+  Mientes, lo sé muy bien
+  Es que tanto daño ha dado, las heridas se han cerrado, soy inmune a tu veneno al fin
+
+  No me vengas ahora que es verdad
+  Sin mi cariño tu vida ya no es igual
+  Que tu mundo no vive si no es conmigo
+
+  Ya perdiste, niña, credibilidad
+  Me mentiste y ahora debes pagar
+  Si sufres y lloras, es tu castigo
+
+  Coro:
+
+  Mientes, lo sé muy bien
+  Me tomas, miras y dejas, soy el que paga después
+  Mientes, lo sé muy bien
+  Es que tanto daño ha dado, las heridas se han cerrado, soy inmune a tu veneno al fin
+  `,
+  },
   { id: 6, slug: "march", name: "March" },
   {
     id: 7,
