@@ -364,6 +364,12 @@ export default function Home() {
       </h1>
 
       <h2 className="font-semi-bold mt-2 text-2xl">Agosto 2024</h2>
+        <img
+          src="/images/k90-flyer.jpeg"
+          width="70"
+          alt="event flyer"
+          className="inline"
+        />{" "}
 
       <h2 className="mt-4 text-3xl font-bold ">Repertorio:</h2>
       <ul className="mt-4">
