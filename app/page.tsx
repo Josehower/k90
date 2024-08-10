@@ -388,7 +388,7 @@ const songs: Song[] = [
 
   ¿Por qué los niños pueden jugar
   Sin pensar en aparentar
-  Mientras los grandes nos matamos
+  Mientras nosotros nos matamos
   En una guerra sin final?
 
   Ella quisiera ser artista
@@ -410,7 +410,7 @@ const songs: Song[] = [
 
   ¿Por qué los niños pueden jugar
   Sin pensar en aparentar
-  Mientras los grandes nos matamos
+  Mientras nosotros nos matamos
   En una guerra sin final?
   `,
   },
