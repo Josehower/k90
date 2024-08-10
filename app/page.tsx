@@ -307,8 +307,8 @@ const songs: Song[] = [
   y esta vez es verdad
   `,
   },
-  { id: 10, slug: "no-acabemos", name: "No Acabemos" },
-  { id: 11, slug: "solo-fui-un-juguete", name: "Solo fui un juguete" },
+  // { id: 10, slug: "no-acabemos", name: "No Acabemos" },
+  // { id: 11, slug: "solo-fui-un-juguete", name: "Solo fui un juguete" },
   // { id: 12, slug: "pecado", name: "Pecado" },
 ]
 
