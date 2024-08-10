@@ -113,12 +113,91 @@ const songs: Song[] = [
     slug: "sucias-palabras",
     name: "Sucias Palabras",
     audioFile: "/songs/sucias-palabras.mp3",
+    lyric: `
+  Hoy no sé quién soy,  
+  pero no soy quien quiero,  
+  y me estoy perdiendo en este agujero
+  
+  Mírame pronto, me desvanezco,  
+  y no sé si alguien merezca esto
+  
+  Escarbo mis entrañas buscando respuestas,  
+  pero hoy no las encuentro
+  
+  Estoy buscando, sigo buscando,  
+  y no sé quién me hallará
+  
+  Dime, ¿quién me puso acá?  
+  ¿Por qué no me encuentro?  
+  Dime, ¿por qué hoy no voy ni vengo?
+  
+  Cerré la puerta, ya no saldré,  
+  no podrás señalarme esta vez
+  
+  No podrás juzgarme más,  
+  no podrás buscarme más
+  
+  Estoy más allá de tus sucias palabras
+  
+  Estoy un poco más allá  
+  del bien y del mal
+  
+  Estoy un poco más allá  
+  del bien y del mal
+    `
   },
   {
     id: 4,
     slug: "santamaria",
     name: "Santamaria",
     audioFile: "/songs/santamaria.mp3",
+      lyric: `
+  Tan importante fue mi amor en tu vida  
+  que no pudiste ni aguantarte ocho días
+  
+  Para cambiarme, no hubo mucho que pensar  
+  y enredarte entre las sábanas de otro y así olvidar
+  
+  Los momentos, los sueños despiertos  
+  promesas que hiciste y hoy rompes como el cristal
+  
+  Tan importante fue mi amor en tu vida  
+  que no pudiste ni aguantarte
+  
+  Mal "pa... saron" los días  
+  mal pasaron las noches  
+  mal pasaste ese día de la mano con ese hombre
+  
+  Mal pasaron los días  
+  mal pasaron las noches  
+  mal pasaste ese día de la mano con ese hombre
+  
+  Maldita mujer de palo, no sabes cuánto me haces daño  
+  tú que te hiciste la Santa María  
+  pero resultaste ser una bandida
+  
+  No te quiero ni ver  
+  no te quiero ni oler  
+  no te quiero ni ver, oh no  
+  no te quiero ni oler
+  
+  Para cambiarme, no hubo mucho que pensar  
+  y restregármelo en la cara, qué cínica  
+  Maldita sin sentimientos, tonta descarada  
+  resultaste siendo una cagada
+  
+  Mal pasaron los días  
+  mal pasaron las noches  
+  mal pasaste ese día de la mano con ese hombre
+  
+  Mal pasaron los días  
+  mal pasaron las noches  
+  mal pasaste ese día de la mano con ese hombre
+  
+  Tan importante fue mi amor en tu vida  
+  que todo resultó un engaño  
+  una mentira
+      `
   },
   {
     id: 5,
@@ -155,7 +234,67 @@ const songs: Song[] = [
   Es que tanto daño ha dado, las heridas se han cerrado, soy inmune a tu veneno al fin
   `,
   },
-  { id: 6, slug: "march", name: "March" },
+  { id: 6, slug: "march", name: "March", lyric: `
+  Cuánto tiempo hubo que esperar para poderte ver,
+  cuánto tiempo hubo que esperar para encontrarte,
+  cuánto tiempo hubo que esperar para poderte ver,
+  cuánto tiempo hubo que esperar para encontrarte.
+  
+  Mucho tuve que caminar para llegar allá,
+  el momento preciso en el que te vi pasar.
+  Ahora, mi nena hermosa, que logré tocar,
+  tu alma noble jamás yo podré olvidar.
+  
+  Precoro:
+  
+  Si eres la inspiración, mi única razón,
+  la que le ha dado vida a toda esta pasión.
+  Solo espero el momento en que te pueda besar,
+  y en tus brazos perderme y no volver jamás.
+  
+  Coro:
+  
+  Cuánto tiempo tuve que esperar,
+  cuánto tiempo para hallarte,
+  cuánto tiempo tuve que esperar,
+  cuánto tiempo para hallarte.
+  
+  Cuánto tiempo hubo que esperar para poderte ver,
+  cuánto tiempo hubo que esperar para encontrarte,
+  cuánto tiempo hubo que esperar para poderte ver,
+  cuánto tiempo hubo que esperar para encontrarte.
+  
+  Es tu cara linda y tu preciosa piel,
+  es en tus carnosos labios que quiero fallecer.
+  Es tu voz, son tus actos, tu forma de ser,
+  es tu perfume el aroma que me hace enloquecer.
+  
+  Precoro:
+  
+  Si eres la inspiración, mi única razón,
+  la que le ha dado vida a toda esta pasión.
+  Solo espero el momento en que te pueda besar,
+  y en tus brazos perderme y no volver jamás.
+  
+  Coro:
+  
+  Cuánto tiempo tuve que esperar,
+  cuánto tiempo para hallarte,
+  cuánto tiempo tuve que esperar,
+  cuánto tiempo para hallarte.
+  
+  Nunca, nunca te esperé así,
+  tan perfectamente, sí.
+  Mira mis ojos, mi alma,
+  verás que toda es para ti.
+  Si tú me dejas entrar,
+  jamás te vas a arrepentir.
+  
+  Cuánto tiempo para hallarte,
+  cuánto tiempo para encontrarte,
+  ya nunca más de mí te irás, no te dejaré escapar jamás.  
+    `,
+  },
   {
     id: 7,
     slug: "y-si",
@@ -318,7 +457,7 @@ function isTouchDevice() {
 
 export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null)
-  const [currentSong, setCurrentSong] = useState<Song>(songs[3])
+  const [currentSong, setCurrentSong] = useState<Song>(songs[0])
   const [preSelectedSong, setPreSelectedSong] = useState<Song>()
 
   const SelectedSong = preSelectedSong || currentSong
@@ -332,6 +471,7 @@ export default function Home() {
   const playAudio = (song: Song) => {
     if (!audioRef.current) return
 
+    if(!song.audioFile)return;
     setCurrentSong(song)
     setPreSelectedSong(undefined)
     audioRef.current.src = song.audioFile || "/songs/santamaria.mp3"
@@ -349,7 +489,7 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto my-10 w-11/12 rounded-lg bg-black bg-opacity-90 p-2 md:w-8/12 md:p-5">
+    <main className="mx-auto my-10 w-11/12 rounded-lg bg-black bg-opacity-90 p-2 md:w-8/12 md:p-5 mb-32">
       <h1 className="text-4xl font-bold">
         <img
           src="/images/k90icon.png"
@@ -408,7 +548,7 @@ export default function Home() {
                   </div>
                 )
               )}
-              <div>{song.name}</div>
+              <div>{!song.audioFile ? <span  className="text-xs font-thin">🔇</span>: ''} {song.name}</div>
             </div>
             <div>
               <Link
