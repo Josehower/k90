@@ -497,27 +497,9 @@ export default function Home() {
           alt="band logo"
           className="inline"
         />{" "}
-        reen
-        <span className="text-band-green">K</span>u
-        <span className="text-band-green">9</span>ntr
-        <span className="text-band-green">0</span>
       </h1>
 
 
-      <div className="flex items-center justify-center flex-col gap-2">
-        <h2 className="font-semi-bold text-center">17.08.2024 - 8:00 PM</h2>
-        <img
-          src="/images/k90-flyer.jpeg"
-          width="250"
-          alt="event flyer"
-          className="center"
-        />{" "}
-        <div>
-        <Link href={'https://maps.app.goo.gl/uKhxq9CbAuv3zLe36'} target="_blank"  className="bg-black p-2 text-center">Como Llegar</Link>
-        - 
-        <Link href={'https://forms.gle/oQcrnhmQ4UeKupPAA'} target="_blank"  className="bg-black p-2 text-center">Compra Tus Boletos</Link>
-        </div>
-      </div>
 
   
       <h2 className="mt-4 text-3xl font-bold ">Repertorio:</h2>
