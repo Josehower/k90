@@ -10,8 +10,10 @@ const config: Config = {
     },
     extend: {
       colors: {
-        "band-green": "#166C21",
-        "band-green-dark": "#09260d",
+        "theme-primary": "#1E293B",
+        "theme-secondary": "#3B82F6", 
+        "theme-dark": "#0F172A",
+        "theme-bg": "#020617",
       },
     },
   },
