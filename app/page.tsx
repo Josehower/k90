@@ -489,26 +489,21 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto my-10 w-11/12 rounded-lg bg-black bg-opacity-90 p-2 md:w-8/12 md:p-5 mb-32">
+    <main className="mx-auto my-10 w-11/12 rounded-lg bg-theme-primary bg-opacity-90 p-2 md:w-8/12 md:p-5 mb-32">
       <h1 className="text-4xl font-bold">
-        <img
-          src="/images/k90icon.png"
-          width="70"
-          alt="band logo"
-          className="inline"
-        />{" "}
+        JoseF
       </h1>
 
 
 
   
-      <h2 className="mt-4 text-3xl font-bold ">Repertorio:</h2>
+      <h2 className="mt-4 text-3xl font-bold ">Songs:</h2>
       <ul className="mt-4">
         {songs.map((song) => (
           <li
             key={`list-item-song-${song.id}`}
             className={`flex flex-wrap items-center justify-between gap-1 rounded-lg px-2
-              ${SelectedSong.id === song.id ? "bg-band-green-dark" : "hover:bg-band-green-dark hover:bg-opacity-60"}
+              ${SelectedSong.id === song.id ? "bg-theme-dark" : "hover:bg-theme-dark hover:bg-opacity-60"}
             `}
             onDoubleClick={() => playAudio(song)}
             onClick={() => {
@@ -534,13 +529,13 @@ export default function Home() {
             </div>
             <div>
               <Link
-                className="rounded-lg border border-solid bg-black p-2 md:mr-20"
+                className="rounded-lg border border-solid bg-theme-primary p-2 md:mr-20"
                 href={`/#lyric-${song.slug}`}
                 onClick={(e) => {
                   e.stopPropagation()
                 }}
               >
-                Letra
+                Lyrics
               </Link>
             </div>
           </li>
@@ -563,9 +558,9 @@ export default function Home() {
         </div>
       ))}
 
-      <div className="fixed bottom-0 left-0 flex w-full justify-center bg-band-green-dark px-6 py-4">
-        <div className="font-semi-bold text-center">
-          {currentSong.name} - K90
+      <div className="fixed bottom-0 left-0 flex w-full justify-center bg-theme-secondary px-6 py-4">
+        <div className="font-semi-bold text-center text-white">
+          {currentSong.name} - JoseF
           <audio
             ref={audioRef}
             controls
